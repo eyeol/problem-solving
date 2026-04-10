@@ -1,6 +1,4 @@
 test.py
 .DS_Store
 .claude/
-README.md
-assets/progress.svg
-data/progress.json
+__pycache__/

@@ -1,4 +1,8 @@
 {
+  "codetree": {
+    "stage": 0,
+    "total": 7
+  },
   "lc_top150": {
     "Array / String": {
       "solved": 1,

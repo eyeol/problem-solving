@@ -1,8 +1,10 @@
 # Problem Solving
 
+### Current Status
+
 ![Progress](./assets/progress.svg)
 
-> BOJ Platinum · LeetCode Top Interview 150 — 하루 한 문제, 꾸준히.
+> Incremental Progress & Structured Artifacts
 
 ---
 
@@ -10,31 +12,77 @@
 
 ### LeetCode Top Interview 150
 
-| Category | Progress | Count | Done |
-| --- | --- | --- | --- |
-| Array / String | `░░░░░░░░░░` 4% | 1 / 24 |  |
-| Two Pointers | `░░░░░░░░░░` 0% | 0 / 5 |  |
-| Sliding Window | `░░░░░░░░░░` 0% | 0 / 4 |  |
-| Matrix | `░░░░░░░░░░` 0% | 0 / 5 |  |
-| Hashmap | `░░░░░░░░░░` 0% | 0 / 9 |  |
-| Intervals | `░░░░░░░░░░` 0% | 0 / 4 |  |
-| Stack | `░░░░░░░░░░` 0% | 0 / 5 |  |
-| Linked List | `░░░░░░░░░░` 0% | 0 / 11 |  |
-| Binary Tree General | `░░░░░░░░░░` 0% | 0 / 14 |  |
-| Binary Tree BFS | `░░░░░░░░░░` 0% | 0 / 4 |  |
-| Binary Search Tree | `░░░░░░░░░░` 0% | 0 / 3 |  |
-| Graph General | `░░░░░░░░░░` 0% | 0 / 6 |  |
-| Graph BFS | `░░░░░░░░░░` 0% | 0 / 3 |  |
-| Trie | `░░░░░░░░░░` 0% | 0 / 3 |  |
-| Backtracking | `░░░░░░░░░░` 0% | 0 / 7 |  |
-| Divide & Conquer | `░░░░░░░░░░` 0% | 0 / 4 |  |
-| Kadane's Algorithm | `░░░░░░░░░░` 0% | 0 / 2 |  |
-| Binary Search | `░░░░░░░░░░` 0% | 0 / 7 |  |
-| Heap | `░░░░░░░░░░` 0% | 0 / 4 |  |
-| Bit Manipulation | `░░░░░░░░░░` 0% | 0 / 6 |  |
-| Math | `░░░░░░░░░░` 0% | 0 / 6 |  |
-| 1D DP | `░░░░░░░░░░` 0% | 0 / 5 |  |
-| Multidimensional DP | `░░░░░░░░░░` 0% | 0 / 9 |  |
-| **Total** | `░░░░░░░░░░` **1%** | **1 / 150** | |
+<table width="100%">
+  <tr><td align="center">
+    <sub>OVERALL PROGRESS</sub><br/>
+    <h2>1 <sub>/ 150</sub> &nbsp;·&nbsp; 1%</h2>
+    <code>▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱</code>
+  </td></tr>
+</table>
+
+#### Array & Hashing
+
+<table width="720">
+  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
+  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
+  <tr><td>Array / String</td><td><code>░░░░░░░░░░</code> 4%</td><td>1 / 24</td></tr>
+  <tr><td>Two Pointers</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
+  <tr><td>Sliding Window</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+  <tr><td>Matrix</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
+  <tr><td>Hashmap</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 9</td></tr>
+  <tr><td>Intervals</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+</table>
+
+#### Linear DS
+
+<table width="720">
+  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
+  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
+  <tr><td>Stack</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
+  <tr><td>Linked List</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 11</td></tr>
+  <tr><td>Heap</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+</table>
+
+#### Search & Bits
+
+<table width="720">
+  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
+  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
+  <tr><td>Binary Search</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 7</td></tr>
+  <tr><td>Bit Manipulation</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 6</td></tr>
+  <tr><td>Math</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 6</td></tr>
+</table>
+
+#### Tree
+
+<table width="720">
+  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
+  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
+  <tr><td>Binary Tree General</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 14</td></tr>
+  <tr><td>Binary Tree BFS</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+  <tr><td>Binary Search Tree</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 3</td></tr>
+  <tr><td>Trie</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 3</td></tr>
+</table>
+
+#### Graph & Backtracking
+
+<table width="720">
+  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
+  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
+  <tr><td>Graph General</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 6</td></tr>
+  <tr><td>Graph BFS</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 3</td></tr>
+  <tr><td>Backtracking</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 7</td></tr>
+</table>
+
+#### DP & D&C
+
+<table width="720">
+  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
+  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
+  <tr><td>Divide & Conquer</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+  <tr><td>Kadane's Algorithm</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 2</td></tr>
+  <tr><td>1D DP</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
+  <tr><td>Multidimensional DP</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 9</td></tr>
+</table>
 
 <!-- CATEGORIES:END -->
