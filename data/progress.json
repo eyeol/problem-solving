@@ -1,0 +1,119 @@
+{
+  "lc_top150": {
+    "Array / String": {
+      "solved": 0,
+      "total": 24,
+      "completed_at": null
+    },
+    "Two Pointers": {
+      "solved": 0,
+      "total": 5,
+      "completed_at": null
+    },
+    "Sliding Window": {
+      "solved": 0,
+      "total": 4,
+      "completed_at": null
+    },
+    "Matrix": {
+      "solved": 0,
+      "total": 5,
+      "completed_at": null
+    },
+    "Hashmap": {
+      "solved": 0,
+      "total": 9,
+      "completed_at": null
+    },
+    "Intervals": {
+      "solved": 0,
+      "total": 4,
+      "completed_at": null
+    },
+    "Stack": {
+      "solved": 0,
+      "total": 5,
+      "completed_at": null
+    },
+    "Linked List": {
+      "solved": 0,
+      "total": 11,
+      "completed_at": null
+    },
+    "Binary Tree General": {
+      "solved": 0,
+      "total": 14,
+      "completed_at": null
+    },
+    "Binary Tree BFS": {
+      "solved": 0,
+      "total": 4,
+      "completed_at": null
+    },
+    "Binary Search Tree": {
+      "solved": 0,
+      "total": 3,
+      "completed_at": null
+    },
+    "Graph General": {
+      "solved": 0,
+      "total": 6,
+      "completed_at": null
+    },
+    "Graph BFS": {
+      "solved": 0,
+      "total": 3,
+      "completed_at": null
+    },
+    "Trie": {
+      "solved": 0,
+      "total": 3,
+      "completed_at": null
+    },
+    "Backtracking": {
+      "solved": 0,
+      "total": 7,
+      "completed_at": null
+    },
+    "Divide & Conquer": {
+      "solved": 0,
+      "total": 4,
+      "completed_at": null
+    },
+    "Kadane's Algorithm": {
+      "solved": 0,
+      "total": 2,
+      "completed_at": null
+    },
+    "Binary Search": {
+      "solved": 0,
+      "total": 7,
+      "completed_at": null
+    },
+    "Heap": {
+      "solved": 0,
+      "total": 4,
+      "completed_at": null
+    },
+    "Bit Manipulation": {
+      "solved": 0,
+      "total": 6,
+      "completed_at": null
+    },
+    "Math": {
+      "solved": 0,
+      "total": 6,
+      "completed_at": null
+    },
+    "1D DP": {
+      "solved": 0,
+      "total": 5,
+      "completed_at": null
+    },
+    "Multidimensional DP": {
+      "solved": 0,
+      "total": 9,
+      "completed_at": null
+    }
+  }
+}
