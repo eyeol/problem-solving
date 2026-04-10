@@ -23,7 +23,10 @@ PROGRESS_JSON = os.path.join(ROOT, "data", "progress.json")
 TOP150_MAP = os.path.join(ROOT, "data", "top150_map.json")
 README_PATH = os.path.join(ROOT, "README.md")
 SVG_PATH = os.path.join(ROOT, "assets", "progress.svg")
-LC_DIR = os.path.join(ROOT, "leetcode")
+LC_DIRS = [
+    os.path.join(ROOT, "leetcode"),
+    os.path.join(ROOT, "LeetCode"),
+]
 
 
 def fetch_boj():
@@ -50,17 +53,19 @@ def save_progress(progress):
 
 
 def scan_leetcode_folder():
-    """Return the set of problem slugs under leetcode/ (LeetHub-style folder names)."""
-    if not os.path.isdir(LC_DIR):
-        return set()
+    """Return the set of problem slugs under LeetCode folders."""
     slugs = set()
     pattern = re.compile(r"^\d+-(.+)$")
-    for name in os.listdir(LC_DIR):
-        if not os.path.isdir(os.path.join(LC_DIR, name)):
+
+    for lc_dir in LC_DIRS:
+        if not os.path.isdir(lc_dir):
             continue
-        m = pattern.match(name)
-        if m:
-            slugs.add(m.group(1))
+        for _, dirnames, _ in os.walk(lc_dir):
+            for name in dirnames:
+                m = pattern.match(name)
+                if m:
+                    slugs.add(m.group(1))
+
     return slugs
 
 
