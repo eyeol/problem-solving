@@ -154,9 +154,9 @@ LC_LAYOUT = [
 ]
 
 
-CAT_W = 200
-PROG_W = 180
-COUNT_W = 80
+CAT_W = 180
+PROG_W = 150
+COUNT_W = 20
 
 
 def _render_group(title, names, track):
