@@ -154,22 +154,32 @@ LC_LAYOUT = [
 ]
 
 
+CAT_W = 200
+PROG_W = 180
+COUNT_W = 80
+
+
 def _render_group(title, names, track):
     lines = [
         f"#### {title}",
         "",
-        "<table width=\"720\">",
-        "  <colgroup>"
-        "<col width=\"180\"/><col width=\"150\"/><col width=\"60\"/>"
-        "</colgroup>",
-        "  <tr><th align=\"left\">Category</th><th align=\"left\">Progress</th><th align=\"left\">Count</th></tr>",
+        "<table>",
+        "  <tr>"
+        f"<th align=\"left\" width=\"{CAT_W}\">Category</th>"
+        f"<th align=\"left\" width=\"{PROG_W}\">Progress</th>"
+        f"<th align=\"left\" width=\"{COUNT_W}\">Count</th>"
+        "</tr>",
     ]
     for name in names:
         cat = track[name]
         solved, total = cat["solved"], cat["total"]
         pct = solved / total if total else 0.0
         lines.append(
-            f"  <tr><td>{name}</td><td><code>{unicode_bar(pct)}</code> {round(pct*100)}%</td><td>{solved} / {total}</td></tr>"
+            f"  <tr>"
+            f"<td width=\"{CAT_W}\">{name}</td>"
+            f"<td width=\"{PROG_W}\"><code>{unicode_bar(pct)}</code> {round(pct*100)}%</td>"
+            f"<td width=\"{COUNT_W}\">{solved} / {total}</td>"
+            f"</tr>"
         )
     lines.append("</table>")
     lines.append("")

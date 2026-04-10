@@ -22,67 +22,61 @@
 
 #### Array & Hashing
 
-<table width="720">
-  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
-  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
-  <tr><td>Array / String</td><td><code>░░░░░░░░░░</code> 4%</td><td>1 / 24</td></tr>
-  <tr><td>Two Pointers</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
-  <tr><td>Sliding Window</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
-  <tr><td>Matrix</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
-  <tr><td>Hashmap</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 9</td></tr>
-  <tr><td>Intervals</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+<table>
+  <tr><th align="left" width="200">Category</th><th align="left" width="180">Progress</th><th align="left" width="80">Count</th></tr>
+  <tr><td width="200">Array / String</td><td width="180"><code>░░░░░░░░░░</code> 4%</td><td width="80">1 / 24</td></tr>
+  <tr><td width="200">Two Pointers</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 5</td></tr>
+  <tr><td width="200">Sliding Window</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 4</td></tr>
+  <tr><td width="200">Matrix</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 5</td></tr>
+  <tr><td width="200">Hashmap</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 9</td></tr>
+  <tr><td width="200">Intervals</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 4</td></tr>
 </table>
 
 #### Linear DS
 
-<table width="720">
-  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
-  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
-  <tr><td>Stack</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
-  <tr><td>Linked List</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 11</td></tr>
-  <tr><td>Heap</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
+<table>
+  <tr><th align="left" width="200">Category</th><th align="left" width="180">Progress</th><th align="left" width="80">Count</th></tr>
+  <tr><td width="200">Stack</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 5</td></tr>
+  <tr><td width="200">Linked List</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 11</td></tr>
+  <tr><td width="200">Heap</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 4</td></tr>
 </table>
 
 #### Search & Bits
 
-<table width="720">
-  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
-  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
-  <tr><td>Binary Search</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 7</td></tr>
-  <tr><td>Bit Manipulation</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 6</td></tr>
-  <tr><td>Math</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 6</td></tr>
+<table>
+  <tr><th align="left" width="200">Category</th><th align="left" width="180">Progress</th><th align="left" width="80">Count</th></tr>
+  <tr><td width="200">Binary Search</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 7</td></tr>
+  <tr><td width="200">Bit Manipulation</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 6</td></tr>
+  <tr><td width="200">Math</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 6</td></tr>
 </table>
 
 #### Tree
 
-<table width="720">
-  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
-  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
-  <tr><td>Binary Tree General</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 14</td></tr>
-  <tr><td>Binary Tree BFS</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
-  <tr><td>Binary Search Tree</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 3</td></tr>
-  <tr><td>Trie</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 3</td></tr>
+<table>
+  <tr><th align="left" width="200">Category</th><th align="left" width="180">Progress</th><th align="left" width="80">Count</th></tr>
+  <tr><td width="200">Binary Tree General</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 14</td></tr>
+  <tr><td width="200">Binary Tree BFS</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 4</td></tr>
+  <tr><td width="200">Binary Search Tree</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 3</td></tr>
+  <tr><td width="200">Trie</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 3</td></tr>
 </table>
 
 #### Graph & Backtracking
 
-<table width="720">
-  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
-  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
-  <tr><td>Graph General</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 6</td></tr>
-  <tr><td>Graph BFS</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 3</td></tr>
-  <tr><td>Backtracking</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 7</td></tr>
+<table>
+  <tr><th align="left" width="200">Category</th><th align="left" width="180">Progress</th><th align="left" width="80">Count</th></tr>
+  <tr><td width="200">Graph General</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 6</td></tr>
+  <tr><td width="200">Graph BFS</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 3</td></tr>
+  <tr><td width="200">Backtracking</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 7</td></tr>
 </table>
 
 #### DP & D&C
 
-<table width="720">
-  <colgroup><col width="180"/><col width="150"/><col width="60"/></colgroup>
-  <tr><th align="left">Category</th><th align="left">Progress</th><th align="left">Count</th></tr>
-  <tr><td>Divide & Conquer</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 4</td></tr>
-  <tr><td>Kadane's Algorithm</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 2</td></tr>
-  <tr><td>1D DP</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 5</td></tr>
-  <tr><td>Multidimensional DP</td><td><code>░░░░░░░░░░</code> 0%</td><td>0 / 9</td></tr>
+<table>
+  <tr><th align="left" width="200">Category</th><th align="left" width="180">Progress</th><th align="left" width="80">Count</th></tr>
+  <tr><td width="200">Divide & Conquer</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 4</td></tr>
+  <tr><td width="200">Kadane's Algorithm</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 2</td></tr>
+  <tr><td width="200">1D DP</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 5</td></tr>
+  <tr><td width="200">Multidimensional DP</td><td width="180"><code>░░░░░░░░░░</code> 0%</td><td width="80">0 / 9</td></tr>
 </table>
 
 <!-- CATEGORIES:END -->
