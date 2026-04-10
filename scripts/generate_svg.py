@@ -145,15 +145,14 @@ def unicode_bar(progress, width=10):
 
 def render_category_table(track):
     lines = ["### LeetCode Top Interview 150", ""]
-    lines.append("| Category | Progress | Count | Done |")
-    lines.append("| --- | --- | --- | --- |")
+    lines.append("| Category | Progress | Count |")
+    lines.append("| --- | --- | --- |")
     for name, cat in track.items():
         solved, total = cat["solved"], cat["total"]
         pct = solved / total if total else 0.0
-        done = cat.get("completed_at") or ("✅" if solved >= total and total > 0 else "")
-        lines.append(f"| {name} | `{unicode_bar(pct)}` {round(pct*100)}% | {solved} / {total} | {done} |")
+        lines.append(f"| {name} | `{unicode_bar(pct)}` {round(pct*100)}% | {solved} / {total} |")
     solved_sum, total_sum, pct_sum = track_totals(track)
-    lines.append(f"| **Total** | `{unicode_bar(pct_sum)}` **{round(pct_sum*100)}%** | **{solved_sum} / {total_sum}** | |")
+    lines.append(f"| **Total** | `{unicode_bar(pct_sum)}` **{round(pct_sum*100)}%** | **{solved_sum} / {total_sum}** |")
     lines.append("")
     return "\n".join(lines)
 
