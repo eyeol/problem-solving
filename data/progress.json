@@ -119,5 +119,11 @@
       "total": 9,
       "completed_at": null
     }
+  },
+  "boj": {
+    "handle": "kamu_kamui",
+    "tier_name": "Silver II",
+    "solved": 0,
+    "progress": 0.45
   }
 }

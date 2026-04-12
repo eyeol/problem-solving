@@ -14,6 +14,7 @@ BOJ_TIER_NAMES = {
     16: "Platinum V", 17: "Platinum IV", 18: "Platinum III", 19: "Platinum II", 20: "Platinum I",
     21: "Diamond V", 22: "Diamond IV",
 }
+BOJ_TIER_BY_NAME = {name: tier for tier, name in BOJ_TIER_NAMES.items()}
 PLATINUM_END = 20
 
 LEETCODE_GOAL = 150  # Top Interview 150
@@ -31,7 +32,11 @@ LC_DIRS = [
 
 def fetch_boj():
     url = f"https://solved.ac/api/v3/user/show?handle={BOJ_ID}"
-    res = requests.get(url, timeout=10)
+    headers = {
+        "User-Agent": "problem-solving-progress/1.0",
+        "Accept": "application/json",
+    }
+    res = requests.get(url, timeout=10, headers=headers)
     res.raise_for_status()
     data = res.json()
     tier = data["tier"]
@@ -50,6 +55,66 @@ def save_progress(progress):
     with open(PROGRESS_JSON, "w", encoding="utf-8") as f:
         json.dump(progress, f, ensure_ascii=False, indent=2)
         f.write("\n")
+
+
+def cache_boj_stats(progress, tier_name, solved, progress_value):
+    progress["boj"] = {
+        "handle": BOJ_ID,
+        "tier_name": tier_name,
+        "solved": solved,
+        "progress": round(progress_value, 4),
+    }
+
+
+def load_cached_boj_stats(progress):
+    cached = progress.get("boj")
+    if isinstance(cached, dict):
+        tier_name = cached.get("tier_name")
+        solved = cached.get("solved")
+        progress_value = cached.get("progress")
+        if isinstance(tier_name, str) and isinstance(progress_value, (int, float)):
+            solved_value = solved if isinstance(solved, int) else 0
+            return tier_name, solved_value, float(progress_value)
+
+    if not os.path.exists(SVG_PATH):
+        return None
+
+    with open(SVG_PATH, encoding="utf-8") as f:
+        svg = f.read()
+
+    match = re.search(
+        r">BOJ</text>.*?text-anchor=\"middle\">([^<]+)</text>",
+        svg,
+        re.DOTALL,
+    )
+    if not match:
+        return None
+
+    tier_name = match.group(1).strip()
+    tier = BOJ_TIER_BY_NAME.get(tier_name)
+    if tier is None:
+        return None
+
+    progress_value = min(tier / PLATINUM_END, 1.0)
+    return tier_name, 0, progress_value
+
+
+def resolve_boj_stats(progress):
+    try:
+        boj_stats = fetch_boj()
+    except (requests.RequestException, KeyError, ValueError) as exc:
+        cached = load_cached_boj_stats(progress)
+        if cached is None:
+            print(f"  BOJ fetch failed: {exc}")
+            print("  No cached BOJ stats found; keeping the existing SVG")
+            return None
+        print(f"  BOJ fetch failed: {exc}")
+        print("  Falling back to cached BOJ stats")
+        cache_boj_stats(progress, *cached)
+        return cached
+
+    cache_boj_stats(progress, *boj_stats)
+    return boj_stats
 
 
 def scan_leetcode_folder():
@@ -241,11 +306,14 @@ def main():
 
     matched, found = sync_lc_progress(progress, slug_map)
     print(f"  leetcode/ scan: {found} slugs found, {matched} matched Top 150")
-    save_progress(progress)
 
     print("Fetching BOJ stats...")
-    boj_tier, boj_solved, boj_progress = fetch_boj()
-    print(f"  tier={boj_tier}, solved={boj_solved}, progress={boj_progress:.2f}")
+    boj_stats = resolve_boj_stats(progress)
+    if boj_stats is None:
+        boj_tier = boj_solved = boj_progress = None
+    else:
+        boj_tier, boj_solved, boj_progress = boj_stats
+        print(f"  tier={boj_tier}, solved={boj_solved}, progress={boj_progress:.2f}")
 
     lc_count, lc_total, lc_progress = track_totals(progress["lc_top150"])
     print(f"  LC Top150: {lc_count} / {lc_total} ({lc_progress*100:.0f}%)")
@@ -255,11 +323,19 @@ def main():
     ct_progress = min(ct_stage / ct_total, 1.0) if ct_total else 0.0
     print(f"  Codetree: {ct_stage} / {ct_total} ({int(ct_progress*100)}%)")
 
-    svg = generate_svg(boj_tier, boj_progress, lc_count, lc_progress, ct_stage, ct_total, ct_progress)
-    os.makedirs(os.path.dirname(SVG_PATH), exist_ok=True)
-    with open(SVG_PATH, "w", encoding="utf-8") as f:
-        f.write(svg)
-    print(f"SVG written to {SVG_PATH}")
+    save_progress(progress)
+
+    if boj_stats is None and os.path.exists(SVG_PATH):
+        print("SVG update skipped because BOJ stats are unavailable")
+    else:
+        if boj_stats is None:
+            boj_tier, boj_progress = "Unrated", 0.0
+            print("Writing a placeholder SVG because no previous BOJ SVG exists")
+        svg = generate_svg(boj_tier, boj_progress, lc_count, lc_progress, ct_stage, ct_total, ct_progress)
+        os.makedirs(os.path.dirname(SVG_PATH), exist_ok=True)
+        with open(SVG_PATH, "w", encoding="utf-8") as f:
+            f.write(svg)
+        print(f"SVG written to {SVG_PATH}")
 
     update_readme(progress)
     print("README categories section updated")
