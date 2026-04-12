@@ -15,7 +15,7 @@
 <table width="100%">
   <tr><td align="center">
     <sub>OVERALL PROGRESS</sub><br/>
-    <h2>1 <sub>/ 150</sub> &nbsp;·&nbsp; 1%</h2>
+    <h2>2 <sub>/ 150</sub> &nbsp;·&nbsp; 1%</h2>
     <code>▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱</code>
   </td></tr>
 </table>
@@ -24,7 +24,7 @@
 
 <table>
   <tr><th align="left" width="180">Category</th><th align="left" width="150">Progress</th><th align="left" width="20">Count</th></tr>
-  <tr><td width="180">Array / String</td><td width="150"><code>░░░░░░░░░░</code> 4%</td><td width="20">1 / 24</td></tr>
+  <tr><td width="180">Array / String</td><td width="150"><code>█░░░░░░░░░</code> 8%</td><td width="20">2 / 24</td></tr>
   <tr><td width="180">Two Pointers</td><td width="150"><code>░░░░░░░░░░</code> 0%</td><td width="20">0 / 5</td></tr>
   <tr><td width="180">Sliding Window</td><td width="150"><code>░░░░░░░░░░</code> 0%</td><td width="20">0 / 4</td></tr>
   <tr><td width="180">Matrix</td><td width="150"><code>░░░░░░░░░░</code> 0%</td><td width="20">0 / 5</td></tr>
