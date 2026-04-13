@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import re
@@ -28,6 +29,8 @@ LC_DIRS = [
     os.path.join(ROOT, "leetcode"),
     os.path.join(ROOT, "LeetCode"),
 ]
+PROGRESS_CARD_START = "<!-- PROGRESS_CARD:START -->"
+PROGRESS_CARD_END = "<!-- PROGRESS_CARD:END -->"
 
 
 def fetch_boj():
@@ -282,12 +285,30 @@ def render_category_table(track):
     return "\n".join(lines)
 
 
+def build_progress_card_block():
+    with open(SVG_PATH, "rb") as f:
+        svg_hash = hashlib.sha1(f.read()).hexdigest()[:12]
+    return (
+        f"{PROGRESS_CARD_START}\n"
+        f"![Progress](./assets/progress.svg?v={svg_hash})\n"
+        f"{PROGRESS_CARD_END}"
+    )
+
+
 def update_readme(progress):
     body = render_category_table(progress["lc_top150"])
     block = f"<!-- CATEGORIES:START -->\n\n{body}\n<!-- CATEGORIES:END -->"
+    progress_card_block = build_progress_card_block()
 
     with open(README_PATH, encoding="utf-8") as f:
         content = f.read()
+
+    progress_card_pattern = re.compile(
+        rf"{re.escape(PROGRESS_CARD_START)}.*?{re.escape(PROGRESS_CARD_END)}",
+        re.DOTALL,
+    )
+    if progress_card_pattern.search(content):
+        content = progress_card_pattern.sub(progress_card_block, content)
 
     pattern = re.compile(
         r"<!-- CATEGORIES:START -->.*?<!-- CATEGORIES:END -->",

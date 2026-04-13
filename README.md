@@ -2,7 +2,9 @@
 
 ### Current Status
 
-![Progress](./assets/progress.svg)
+<!-- PROGRESS_CARD:START -->
+![Progress](./assets/progress.svg?v=11730bb11430)
+<!-- PROGRESS_CARD:END -->
 
 > Incremental Progress & Structured Artifacts
 
