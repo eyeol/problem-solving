@@ -158,9 +158,9 @@ def track_totals(track):
     return solved, total, progress
 
 
-def generate_svg(boj_tier, boj_progress, lc_count, lc_progress, ct_stage, ct_total, ct_progress):
+def generate_svg(boj_tier, boj_progress, lc_count, lc_progress):
     W = 470
-    H = 217
+    H = 164
     pad = 24
     bar_w = W - pad * 2
     row_h = 54
@@ -193,7 +193,7 @@ def generate_svg(boj_tier, boj_progress, lc_count, lc_progress, ct_stage, ct_tot
   <text x="{pad}" y="22" font-size="9" font-weight="500" letter-spacing="1.5"
     fill="#8b949e" font-family="'SF Mono','Fira Code',monospace">GOALS</text>
   <text x="{pad + 48}" y="22" font-size="9" fill="#8b949e"
-    font-family="'SF Mono','Fira Code',monospace">BOJ Platinum · LC Top Interview 150 · Codetree Trails</text>
+    font-family="'SF Mono','Fira Code',monospace">BOJ Platinum · LC Top Interview 150</text>
 
   <line x1="{pad}" y1="30" x2="{W - pad}" y2="30" stroke="#e1e4e8" stroke-width="0.5"/>
 
@@ -202,7 +202,6 @@ def generate_svg(boj_tier, boj_progress, lc_count, lc_progress, ct_stage, ct_tot
 
   {row(64, "BOJ", boj_tier, "#0F6E56", "#E1F5EE", "→ Platinum", boj_progress, "#1D9E75")}
   {row(64 + row_h, "LC Top150", f"{lc_count} / {LEETCODE_GOAL}", "#854F0B", "#FAEEDA", f"{round(lc_progress*100)}%", lc_progress, "#EF9F27")}
-  {row(64 + row_h * 2, "Codetrails", f"{ct_stage} / {ct_total}", "#3A4CB4", "#E6E9FA", f"{int(ct_progress*100)}%", ct_progress, "#5468DB")}
 
 </svg>"""
 
@@ -339,11 +338,6 @@ def main():
     lc_count, lc_total, lc_progress = track_totals(progress["lc_top150"])
     print(f"  LC Top150: {lc_count} / {lc_total} ({lc_progress*100:.0f}%)")
 
-    ct_stage = progress["codetree"]["stage"]
-    ct_total = progress["codetree"]["total"]
-    ct_progress = min(ct_stage / ct_total, 1.0) if ct_total else 0.0
-    print(f"  Codetree: {ct_stage} / {ct_total} ({int(ct_progress*100)}%)")
-
     save_progress(progress)
 
     if boj_stats is None and os.path.exists(SVG_PATH):
@@ -352,7 +346,7 @@ def main():
         if boj_stats is None:
             boj_tier, boj_progress = "Unrated", 0.0
             print("Writing a placeholder SVG because no previous BOJ SVG exists")
-        svg = generate_svg(boj_tier, boj_progress, lc_count, lc_progress, ct_stage, ct_total, ct_progress)
+        svg = generate_svg(boj_tier, boj_progress, lc_count, lc_progress)
         os.makedirs(os.path.dirname(SVG_PATH), exist_ok=True)
         with open(SVG_PATH, "w", encoding="utf-8") as f:
             f.write(svg)

@@ -1,8 +1,4 @@
 {
-  "codetree": {
-    "stage": 0,
-    "total": 7
-  },
   "lc_top150": {
     "Array / String": {
       "solved": 3,
@@ -123,7 +119,7 @@
   "boj": {
     "handle": "kamu_kamui",
     "tier_name": "Silver II",
-    "solved": 0,
+    "solved": 76,
     "progress": 0.45
   }
 }
