@@ -15,4 +15,4 @@ for i in range(n): # 0부터 n-1
     if diff < diff_sum:
         diff_sum = diff
 
-print(diff_s)
+print(diff_sum)
