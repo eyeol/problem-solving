@@ -15,7 +15,7 @@
 <table width="100%">
   <tr><td align="center">
     <sub>OVERALL PROGRESS</sub><br/>
-    <h2>3 <sub>/ 150</sub> &nbsp;·&nbsp; 2%</h2>
+    <h2>4 <sub>/ 150</sub> &nbsp;·&nbsp; 3%</h2>
     <code>▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱</code>
   </td></tr>
 </table>
@@ -37,7 +37,7 @@
 <table>
   <tr><th align="left" width="180">Category</th><th align="left" width="150">Progress</th><th align="left" width="20">Count</th></tr>
   <tr><td width="180">Stack</td><td width="150"><code>░░░░░░░░░░</code> 0%</td><td width="20">0 / 5</td></tr>
-  <tr><td width="180">Linked List</td><td width="150"><code>░░░░░░░░░░</code> 0%</td><td width="20">0 / 11</td></tr>
+  <tr><td width="180">Linked List</td><td width="150"><code>█░░░░░░░░░</code> 9%</td><td width="20">1 / 11</td></tr>
   <tr><td width="180">Heap</td><td width="150"><code>░░░░░░░░░░</code> 0%</td><td width="20">0 / 4</td></tr>
 </table>
 

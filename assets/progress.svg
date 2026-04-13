@@ -36,12 +36,12 @@
   <g transform="translate(24, 124)">
     <rect width="80" height="19" rx="4" fill="#FAEEDA"/>
     <text x="40" y="13.5" font-family="'SF Mono','Fira Code',monospace"
-      font-size="10.5" font-weight="500" fill="#854F0B" text-anchor="middle">3 / 150</text>
+      font-size="10.5" font-weight="500" fill="#854F0B" text-anchor="middle">4 / 150</text>
   </g>
   <text x="446" y="135" font-family="'SF Mono','Fira Code',monospace"
-    font-size="10" fill="#8b949e" text-anchor="end">2%</text>
+    font-size="10" fill="#8b949e" text-anchor="end">3%</text>
   <rect x="24" y="148" width="422" height="4" rx="2" fill="#eaeef2"/>
-  <rect x="24" y="148" width="8" height="4" rx="2" fill="#EF9F27"/>
+  <rect x="24" y="148" width="11" height="4" rx="2" fill="#EF9F27"/>
 
   
   <text x="24" y="172" font-family="'SF Mono','Fira Code',monospace"
