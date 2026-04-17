@@ -6,53 +6,37 @@ input = sys.stdin.readline
 def solution():
     T = int(input())
 
-    def digitalize(num: int):
-        digits = str(num)
-        N = 4 - len(digits)
-        digits = "0"*N + digits
-        return digits
-
-
-    def ins_D(digits: str):
-        num = int(digits)
-        result = digitalize((2*num) % 10000)
-        return result
+    def ins_D(n):
+        return (n * 2) % 10000
     
-    def ins_S(digits: str):
-        num = int(digits)
-        if num == 0:
-            return "9999"
-        result = digitalize(num - 1)
-        return result
+    def ins_S(n):
+        return 9999 if n == 0 else n - 1
 
-    def ins_L(digits: str):
-        result = digits[1] + digits[2] + digits[3] + digits[0]
-        return result
+    def ins_L(n):
+        # abcd → bcda
+        return (n % 1000) * 10 + n // 1000
     
-    def ins_R(digits: str):
-        result = digits[3] + digits[0] + digits[1] + digits[2]
-        return result
+    def ins_R(n):
+        # abcd → dabc
+        return (n % 10) * 1000 + n // 10
 
 
     for _ in range(T):
         A, B = map(int, input().split())
-        A = digitalize(A)
-        B = digitalize(B)
 
         visited = [False] * 10000
         parent = [None] * 10000
         
-        # (str, # of ops)
         q = deque([A])
-        visited[int(A)] = True
+        visited[A] = True
 
         while q:
             cur = q.popleft()
             if cur == B:
                 # 역추적
                 ops = []
-                while parent[int(cur)] is not None:
-                    prev, op = parent[int(cur)]
+                while parent[cur] is not None:
+                    prev, op = parent[cur]
                     ops.append(op)
                     cur = prev
                 print("".join(reversed(ops)))
@@ -60,9 +44,9 @@ def solution():
             
             for op, nxt in [("D", ins_D(cur)), ("S", ins_S(cur)),
                             ("L", ins_L(cur)), ("R", ins_R(cur))]:
-                if not visited[int(nxt)]:
-                    visited[int(nxt)] = True
-                    parent[int(nxt)] = (cur, op)
+                if not visited[nxt]:
+                    visited[nxt] = True
+                    parent[nxt] = (cur, op)
                     q.append(nxt)
 
 
