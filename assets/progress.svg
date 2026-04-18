@@ -23,12 +23,12 @@
   <g transform="translate(24, 70)">
     <rect width="80" height="19" rx="4" fill="#E1F5EE"/>
     <text x="40" y="13.5" font-family="'SF Mono','Fira Code',monospace"
-      font-size="10.5" font-weight="500" fill="#0F6E56" text-anchor="middle">Silver II</text>
+      font-size="10.5" font-weight="500" fill="#0F6E56" text-anchor="middle">Gold V</text>
   </g>
   <text x="446" y="81" font-family="'SF Mono','Fira Code',monospace"
     font-size="10" fill="#8b949e" text-anchor="end">→ Platinum</text>
   <rect x="24" y="94" width="422" height="4" rx="2" fill="#eaeef2"/>
-  <rect x="24" y="94" width="190" height="4" rx="2" fill="#1D9E75"/>
+  <rect x="24" y="94" width="232" height="4" rx="2" fill="#1D9E75"/>
 
   
   <text x="24" y="118" font-family="'SF Mono','Fira Code',monospace"
