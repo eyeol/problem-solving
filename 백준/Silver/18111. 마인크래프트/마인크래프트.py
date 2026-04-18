@@ -7,7 +7,7 @@ def solution():
     N, M, B = map(int, input().split())
     ground = [list(map(int, input().split())) for _ in range(N)]
 
-    def calculate_time(h: int, bag: int):
+    def calculate_time(h: int, bag: int, cur_min):
         time = 0
         for i in range(N):
             for j in range(M):
@@ -19,6 +19,11 @@ def solution():
                     time += diff*(-2)
                 # 박스 정리
                 bag -= diff
+
+                # early return
+                if time > cur_min:
+                    return -1
+                
         if bag < 0: # 평탄화하기에 블록이 모자람
             return -1
         else:
@@ -28,7 +33,7 @@ def solution():
     ans_h = 0
 
     for h in range(257): # 0~256
-        time_cost = calculate_time(h, B)
+        time_cost = calculate_time(h, B, min_time)
         if time_cost != -1 and time_cost <= min_time:
             ans_h = h
             min_time = time_cost
