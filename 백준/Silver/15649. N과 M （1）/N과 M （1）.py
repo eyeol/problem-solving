@@ -12,6 +12,7 @@ def solution():
     def backtrack():
         if len(result) == M:
             print(*result)
+            return
 
         for i in range(1, N+1):
             if visited[i]:
