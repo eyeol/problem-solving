@@ -15,24 +15,24 @@ def solution():
     def bfs(virus, maps):
         # 방문 기록 초기화
         visited = [[0]* M for _ in range(N)]
-
+        q = deque()
         for v in virus:
             # virus 하나는 (x, y) tuple
-            if not visited[v[0]][v[1]]:
-                q = deque([v])
-                visited[v[0]][v[1]]
-                # 퍼지는건 바이러스
-                while q:
-                    cx, cy = q.popleft()
-                    for k in range(4):
-                        nx, ny = cx + DX[k], cy + DY[k]
-                        # 범위 안에 있고 벽이 아니어야
-                        if 0<=nx<N and 0<=ny<M and maps[nx][ny] != 1:
-                            # 빈칸이든 바이러스든 방문 안했다면 추가
-                            if not visited[nx][ny]:
-                                visited[nx][ny] = 1
-                                maps[nx][ny] = 2
-                                q.append((nx, ny))
+            q.append(v)
+            visited[v[0]][v[1]] = 1
+
+        # 퍼지는건 바이러스
+        while q:
+            cx, cy = q.popleft()
+            for k in range(4):
+                nx, ny = cx + DX[k], cy + DY[k]
+                # 범위 안에 있고 벽이 아니어야
+                if 0<=nx<N and 0<=ny<M and maps[nx][ny] != 1:
+                    # 빈칸이든 바이러스든 방문 안했다면 추가
+                    if not visited[nx][ny]:
+                        visited[nx][ny] = 1
+                        maps[nx][ny] = 2
+                        q.append((nx, ny))
 
         # 최종 반환할 결과물은 안전 지역
         safe = 0
