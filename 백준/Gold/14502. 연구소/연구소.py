@@ -55,7 +55,6 @@ def solution():
     # 빈 칸 중에서 벽 세울 세 칸을 골라야 함
     candidate = list(itertools.combinations(empty_space, 3))
 
-
     ans = 0
     for case in candidate:
         # freash map 매번 복사해옴
