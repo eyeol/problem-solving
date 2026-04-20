@@ -16,6 +16,8 @@ def solution():
 
     # X에서 출발해서 노드별 도달하는 최단거리를 구해야 함 = BFS
     # 그런데 간선에 길이 정보가 있음 = 우선순위 큐로 다익스트라
+
+    
     
     def dijkstra(u, adj):
         min_dist = [float("INF")] * (N+1)
