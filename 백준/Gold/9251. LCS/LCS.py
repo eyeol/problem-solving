@@ -20,5 +20,6 @@ def solution():
 
     print(lcs[N][M])
 
+
 if __name__ == "__main__":
     solution()
